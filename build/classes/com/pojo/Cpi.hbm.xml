@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Cpi" table="cpi" catalog="projectdb">
+        <id name="cpiId" type="java.lang.Integer">
+            <column name="CpiId" />
+            <generator class="identity" />
+        </id>
+        <property name="cpiName" type="string">
+            <column name="CpiName" />
+        </property>
+        <property name="cpiCandidateRegId" type="java.lang.Integer">
+            <column name="CpiCandidateRegId" />
+        </property>
+        <property name="cpiTotalVotes" type="java.lang.Integer">
+            <column name="CpiTotalVotes" />
+        </property>
+        <property name="cpiStateTotalVotes" type="java.lang.Integer">
+            <column name="CpiStateTotalVotes" />
+        </property>
+        <property name="cpiCityTotalVotes" type="java.lang.Integer">
+            <column name="CpiCityTotalVotes" />
+        </property>
+        <property name="cpiAreaTotalVotes" type="java.lang.Integer">
+            <column name="CpiAreaTotalVotes" />
+        </property>
+        <property name="cpiFemaleTotalVotes" type="java.lang.Integer">
+            <column name="CpiFemaleTotalVotes" />
+        </property>
+        <property name="cpiMaleTotalVotes" type="java.lang.Integer">
+            <column name="CpiMaleTotalVotes" />
+        </property>
+    </class>
+</hibernate-mapping>

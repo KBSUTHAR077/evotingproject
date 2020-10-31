@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Address" table="address" catalog="projectdb">
+        <id name="addId" type="java.lang.Integer">
+            <column name="AddId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="candidateregistration" class="com.pojo.Candidateregistration" fetch="select">
+            <column name="AddCanID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="voterregistration" class="com.pojo.Voterregistration" fetch="select">
+            <column name="AddVId" not-null="true" />
+        </many-to-one>
+        <property name="addCountry" type="string">
+            <column name="AddCountry" not-null="true" />
+        </property>
+        <property name="addState" type="string">
+            <column name="AddState" not-null="true" />
+        </property>
+        <property name="addCity" type="string">
+            <column name="AddCity" not-null="true" />
+        </property>
+        <property name="addDistrict" type="string">
+            <column name="AddDistrict" not-null="true" />
+        </property>
+        <property name="addPincode" type="string">
+            <column name="AddPincode" length="6" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

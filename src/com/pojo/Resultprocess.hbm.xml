@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Resultprocess" table="resultprocess" catalog="projectdb">
+        <id name="resultPid" type="java.lang.Integer">
+            <column name="ResultPId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="castvote" class="com.pojo.Castvote" fetch="select">
+            <column name="ResultCastId" />
+        </many-to-one>
+        <property name="resultVid" type="java.lang.Integer">
+            <column name="ResultVId" />
+        </property>
+        <property name="resultCanId" type="java.lang.Integer">
+            <column name="ResultCanId" />
+        </property>
+        <property name="resultCountVotes" type="java.lang.Integer">
+            <column name="ResultCountVotes" />
+        </property>
+        <set name="results" table="result" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ResResultPId" />
+            </key>
+            <one-to-many class="com.pojo.Result" />
+        </set>
+    </class>
+</hibernate-mapping>

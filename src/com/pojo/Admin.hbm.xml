@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Admin" table="admin" catalog="projectdb">
+        <id name="adminId" type="java.lang.Integer">
+            <column name="AdminId" />
+            <generator class="identity" />
+        </id>
+        <property name="adminFirstName" type="string">
+            <column name="AdminFirstName" />
+        </property>
+        <property name="adminMiddleName" type="string">
+            <column name="AdminMiddleName" />
+        </property>
+        <property name="adminLastName" type="string">
+            <column name="AdminLastName" />
+        </property>
+        <property name="adminSecurityQues" type="string">
+            <column name="AdminSecurityQues" />
+        </property>
+        <property name="adminSecurityAnswer" type="string">
+            <column name="AdminSecurityAnswer" />
+        </property>
+        <property name="adminEmailId" type="string">
+            <column name="AdminEmailId" />
+        </property>
+        <property name="adminPassword" type="string">
+            <column name="AdminPassword" />
+        </property>
+        <property name="adminRepassword" type="string">
+            <column name="AdminRepassword" />
+        </property>
+        <property name="adminPhoto" type="string">
+            <column name="AdminPhoto" />
+        </property>
+        <property name="adminHscanFile" type="binary">
+            <column name="AdminHScanFile" />
+        </property>
+        <property name="adminVid" type="java.lang.Integer">
+            <column name="AdminVId" />
+        </property>
+        <property name="adminCanRegId" type="java.lang.Integer">
+            <column name="AdminCanRegId" />
+        </property>
+        <property name="adminStatus" type="string">
+            <column name="AdminStatus" />
+        </property>
+        <property name="adminVstatus1" type="string">
+            <column name="AdminVStatus1" />
+        </property>
+        <property name="adminCanStatus1" type="string">
+            <column name="AdminCanStatus1" />
+        </property>
+        <set name="voterregistrations" table="voterregistration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="VAdminId" />
+            </key>
+            <one-to-many class="com.pojo.Voterregistration" />
+        </set>
+        <set name="castvotes" table="castvote" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CastAdminId" />
+            </key>
+            <one-to-many class="com.pojo.Castvote" />
+        </set>
+        <set name="candidateregistrations" table="candidateregistration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CanAdminId" />
+            </key>
+            <one-to-many class="com.pojo.Candidateregistration" />
+        </set>
+        <set name="trackapplications" table="trackapplication" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="AppliAdminId" />
+            </key>
+            <one-to-many class="com.pojo.Trackapplication" />
+        </set>
+    </class>
+</hibernate-mapping>

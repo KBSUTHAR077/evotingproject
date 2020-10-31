@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/projectdb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+   <mapping resource="com/pojo/Address.hbm.xml" />
+  <mapping resource="com/pojo/Admin.hbm.xml" />
+  <mapping resource="com/pojo/Candidateregistration.hbm.xml" />
+  <mapping resource="com/pojo/Castvote.hbm.xml" />
+   <mapping resource="com/pojo/Party.hbm.xml" />
+  <mapping resource="com/pojo/Result.hbm.xml" />
+  <mapping resource="com/pojo/Resultprocess.hbm.xml" />
+  <mapping resource="com/pojo/Trackapplication.hbm.xml" />
+  <mapping resource="com/pojo/Voterregistration.hbm.xml" />
+ <mapping resource="com/pojo/Bjp.hbm.xml" />
+ <mapping resource="com/pojo/Bsp.hbm.xml" />
+ <mapping resource="com/pojo/Cpi.hbm.xml" />
+ <mapping resource="com/pojo/Incp.hbm.xml" />
+ <mapping resource="com/pojo/Ncp.hbm.xml" />
+  
+    </session-factory>
+</hibernate-configuration>

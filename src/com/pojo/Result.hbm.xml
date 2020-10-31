@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Result" table="result" catalog="projectdb">
+        <id name="resId" type="java.lang.Integer">
+            <column name="ResId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="resultprocess" class="com.pojo.Resultprocess" fetch="select">
+            <column name="ResResultPId" />
+        </many-to-one>
+        <property name="resCanRegId" type="int">
+            <column name="ResCanRegId" not-null="true" />
+        </property>
+        <property name="resCanSymbol" type="binary">
+            <column name="ResCanSymbol" not-null="true" />
+        </property>
+        <property name="resCanName" type="string">
+            <column name="ResCanName" not-null="true" />
+        </property>
+        <property name="resPartyName" type="string">
+            <column name="ResPartyName" not-null="true" />
+        </property>
+        <property name="resNoVotes" type="int">
+            <column name="ResNoVotes" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

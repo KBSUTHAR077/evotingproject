@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Ncp" table="ncp" catalog="projectdb">
+        <id name="ncpId" type="java.lang.Integer">
+            <column name="NcpId" />
+            <generator class="identity" />
+        </id>
+        <property name="ncpName" type="string">
+            <column name="NcpName" />
+        </property>
+        <property name="ncpCandidateRegId" type="java.lang.Integer">
+            <column name="NcpCandidateRegId" />
+        </property>
+        <property name="ncpTotalVotes" type="java.lang.Integer">
+            <column name="NcpTotalVotes" />
+        </property>
+        <property name="ncpStateTotalVotes" type="java.lang.Integer">
+            <column name="NcpStateTotalVotes" />
+        </property>
+        <property name="ncpCityTotalVotes" type="java.lang.Integer">
+            <column name="NcpCityTotalVotes" />
+        </property>
+        <property name="ncpAreaTotalVotes" type="java.lang.Integer">
+            <column name="NcpAreaTotalVotes" />
+        </property>
+        <property name="ncpFemaleTotalVotes" type="java.lang.Integer">
+            <column name="NcpFemaleTotalVotes" />
+        </property>
+        <property name="ncpMaleTotalVotes" type="java.lang.Integer">
+            <column name="NcpMaleTotalVotes" />
+        </property>
+    </class>
+</hibernate-mapping>

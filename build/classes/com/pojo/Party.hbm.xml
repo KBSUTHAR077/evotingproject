@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Party" table="party" catalog="projectdb">
+        <id name="partyId" type="java.lang.Integer">
+            <column name="PartyId" />
+            <generator class="identity" />
+        </id>
+        <property name="partyName" type="string">
+            <column name="PartyName" />
+        </property>
+        <property name="partSymbol" type="string">
+            <column name="PartSymbol" />
+        </property>
+        <property name="partyCanRegId" type="java.lang.Integer">
+            <column name="PartyCanRegId" />
+        </property>
+        <property name="bjpTotalVotes" type="java.lang.Integer">
+            <column name="BjpTotalVotes" />
+        </property>
+        <property name="bjpStateTotalVotes" type="java.lang.Integer">
+            <column name="BjpStateTotalVotes" />
+        </property>
+        <property name="bjpCityTotalVotes" type="java.lang.Integer">
+            <column name="BjpCityTotalVotes" />
+        </property>
+        <property name="bjpAreaTotalVotes" type="java.lang.Integer">
+            <column name="BjpAreaTotalVotes" />
+        </property>
+        <property name="bjpFemaleTotalVotes" type="java.lang.Integer">
+            <column name="BjpFemaleTotalVotes" />
+        </property>
+        <property name="bjpMaleTotalVotes" type="java.lang.Integer">
+            <column name="BjpMaleTotalVotes" />
+        </property>
+        <set name="castvotes" table="castvote" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CastVotiPartyId" />
+            </key>
+            <one-to-many class="com.pojo.Castvote" />
+        </set>
+        <set name="candidateregistrations" table="candidateregistration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CanPartyId" />
+            </key>
+            <one-to-many class="com.pojo.Candidateregistration" />
+        </set>
+    </class>
+</hibernate-mapping>

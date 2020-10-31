@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Candidateregistration" table="candidateregistration" catalog="projectdb">
+        <id name="canId" type="java.lang.Integer">
+            <column name="CanId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="party" class="com.pojo.Party" fetch="select">
+            <column name="CanPartyId" />
+        </many-to-one>
+        <many-to-one name="admin" class="com.pojo.Admin" fetch="select">
+            <column name="CanAdminId" />
+        </many-to-one>
+        <property name="canfirstname" type="string">
+            <column name="Canfirstname" />
+        </property>
+        <property name="canmiddlename" type="string">
+            <column name="Canmiddlename" />
+        </property>
+        <property name="canlastname" type="string">
+            <column name="Canlastname" />
+        </property>
+        <property name="cangender" type="string">
+            <column name="Cangender" />
+        </property>
+        <property name="canmaritalstatus" type="string">
+            <column name="Canmaritalstatus" />
+        </property>
+        <property name="canfathername" type="string">
+            <column name="Canfathername" />
+        </property>
+        <property name="canmothername" type="string">
+            <column name="Canmothername" />
+        </property>
+        <property name="canwifename" type="string">
+            <column name="Canwifename" />
+        </property>
+        <property name="canhusbandname" type="string">
+            <column name="Canhusbandname" />
+        </property>
+        <property name="cangaurdianname" type="string">
+            <column name="Cangaurdianname" />
+        </property>
+        <property name="canage" type="java.lang.Integer">
+            <column name="Canage" />
+        </property>
+        <property name="candob" type="date">
+            <column name="Candob" length="0" />
+        </property>
+        <property name="canpermacountry" type="string">
+            <column name="Canpermacountry" length="250" />
+        </property>
+        <property name="canpermastate" type="string">
+            <column name="Canpermastate" length="250" />
+        </property>
+        <property name="canpermacity" type="string">
+            <column name="Canpermacity" length="250" />
+        </property>
+        <property name="canpermatown" type="string">
+            <column name="Canpermatown" />
+        </property>
+        <property name="canpermaaddress" type="string">
+            <column name="Canpermaaddress" />
+        </property>
+        <property name="canpermapincode" type="string">
+            <column name="Canpermapincode" length="6" />
+        </property>
+        <property name="cancorrescountry" type="string">
+            <column name="Cancorrescountry" />
+        </property>
+        <property name="cancorresstate" type="string">
+            <column name="Cancorresstate" />
+        </property>
+        <property name="cancorrescity" type="string">
+            <column name="Cancorrescity" />
+        </property>
+        <property name="cancorrestown" type="string">
+            <column name="Cancorrestown" />
+        </property>
+        <property name="cancorresaddress" type="string">
+            <column name="Cancorresaddress" />
+        </property>
+        <property name="cancorrespincode" type="string">
+            <column name="Cancorrespincode" length="6" />
+        </property>
+        <property name="canoccupationstatus" type="string">
+            <column name="Canoccupationstatus" />
+        </property>
+        <property name="canoccupationdoc" type="binary">
+            <column name="Canoccupationdoc" />
+        </property>
+        <property name="candesignation" type="string">
+            <column name="Candesignation" />
+        </property>
+        <property name="canadharno" type="string">
+            <column name="Canadharno" length="250" />
+        </property>
+        <property name="canadhardoc" type="binary">
+            <column name="Canadhardoc" />
+        </property>
+        <property name="canpanno" type="string">
+            <column name="Canpanno" length="250" />
+        </property>
+        <property name="canpandoc" type="binary">
+            <column name="Canpandoc" />
+        </property>
+        <property name="canphoto" type="string">
+            <column name="Canphoto" />
+        </property>
+        <property name="canmob" type="string">
+            <column name="Canmob" length="10" />
+        </property>
+        <property name="canAddressId" type="java.lang.Integer">
+            <column name="CanAddressId" />
+        </property>
+        <property name="canpwdstatus" type="java.lang.Boolean">
+            <column name="Canpwdstatus" />
+        </property>
+        <property name="canpwdudidno" type="string">
+            <column name="Canpwdudidno" length="250" />
+        </property>
+        <property name="canpwddoc" type="binary">
+            <column name="Canpwddoc" />
+        </property>
+        <property name="canPartyName" type="string">
+            <column name="CanPartyName" />
+        </property>
+        <property name="canNomiAreaCountry" type="string">
+            <column name="CanNomiAreaCountry" />
+        </property>
+        <property name="canNomiAreaState" type="string">
+            <column name="CanNomiAreaState" />
+        </property>
+        <property name="canNomiAreaCity" type="string">
+            <column name="CanNomiAreaCity" />
+        </property>
+        <property name="canNomiAreaTown" type="string">
+            <column name="CanNomiAreaTown" />
+        </property>
+        <property name="canNomiAreaPincode" type="string">
+            <column name="CanNomiAreaPincode" length="6" />
+        </property>
+        <property name="canEmailId" type="string">
+            <column name="CanEmailID" />
+        </property>
+        <property name="canPassword" type="string">
+            <column name="CanPassword" />
+        </property>
+        <property name="canRepassword" type="string">
+            <column name="CanRepassword" />
+        </property>
+        <property name="canSecurityQues" type="string">
+            <column name="CanSecurityQues" length="500" />
+        </property>
+        <property name="canSecurityAnswer" type="string">
+            <column name="CanSecurityAnswer" length="500" />
+        </property>
+        <property name="canNominationId" type="string">
+            <column name="CanNominationID" />
+        </property>
+        <property name="canCreditStatus" type="java.lang.Boolean">
+            <column name="CanCreditStatus" />
+        </property>
+        <property name="canCreditRelation" type="string">
+            <column name="CanCreditRelation" />
+        </property>
+        <property name="canCreditName" type="string">
+            <column name="CanCreditName" />
+        </property>
+        <property name="canCreditPartyId" type="java.lang.Integer">
+            <column name="CanCreditPartyId" />
+        </property>
+        <property name="canCreditPartyName" type="string">
+            <column name="CanCreditPartyName" length="250" />
+        </property>
+        <property name="canCreditDesignation" type="string">
+            <column name="CanCreditDesignation" length="250" />
+        </property>
+        <property name="canCriminalStatus" type="java.lang.Boolean">
+            <column name="CanCriminalStatus" />
+        </property>
+        <property name="canCriminalRecord" type="string">
+            <column name="CanCriminalRecord" />
+        </property>
+        <property name="canCriminalDoc" type="binary">
+            <column name="CanCriminalDoc" />
+        </property>
+        <property name="canCancelRegistration" type="string">
+            <column name="CanCancelRegistration" />
+        </property>
+        <property name="canCancelOtherDetails" type="string">
+            <column name="CanCancelOtherDetails" length="500" />
+        </property>
+        <property name="canCancelRegistrationDoc" type="binary">
+            <column name="CanCancelRegistrationDoc" />
+        </property>
+        <property name="canCastId" type="java.lang.Integer">
+            <column name="CanCastId" />
+        </property>
+        <property name="canStatus1" type="string">
+            <column name="CanStatus1" />
+        </property>
+        <property name="canStatus2" type="string">
+            <column name="CanStatus2" />
+        </property>
+        <property name="canStatus3" type="string">
+            <column name="CanStatus3" />
+        </property>
+        <property name="canBspId" type="java.lang.Integer">
+            <column name="CanBspId" />
+        </property>
+        <property name="canBjpId" type="java.lang.Integer">
+            <column name="CanBjpId" />
+        </property>
+        <property name="canNcpId" type="java.lang.Integer">
+            <column name="CanNcpId" />
+        </property>
+        <property name="canIncpId" type="java.lang.Integer">
+            <column name="CanIncpId" />
+        </property>
+        <property name="canCpiId" type="java.lang.Integer">
+            <column name="CanCpiId" />
+        </property>
+        <property name="canTotalVotes" type="java.lang.Integer">
+            <column name="CanTotalVotes" />
+        </property>
+        <set name="castvotes" table="castvote" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="canId" />
+            </key>
+            <one-to-many class="com.pojo.Castvote" />
+        </set>
+        <set name="addresses" table="address" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="AddCanID" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Address" />
+        </set>
+    </class>
+</hibernate-mapping>

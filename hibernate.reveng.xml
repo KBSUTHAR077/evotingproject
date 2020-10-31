@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="projectdb" match-name="address"/>
+  <table-filter match-catalog="projectdb" match-name="admin"/>
+  <table-filter match-catalog="projectdb" match-name="bjp"/>
+  <table-filter match-catalog="projectdb" match-name="bsp"/>
+  <table-filter match-catalog="projectdb" match-name="candidateregistration"/>
+  <table-filter match-catalog="projectdb" match-name="castvote"/>
+  <table-filter match-catalog="projectdb" match-name="cpi"/>
+  <table-filter match-catalog="projectdb" match-name="incp"/>
+  <table-filter match-catalog="projectdb" match-name="ncp"/>
+  <table-filter match-catalog="projectdb" match-name="party"/>
+  <table-filter match-catalog="projectdb" match-name="result"/>
+  <table-filter match-catalog="projectdb" match-name="resultprocess"/>
+  <table-filter match-catalog="projectdb" match-name="trackapplication"/>
+  <table-filter match-catalog="projectdb" match-name="voterregistration"/>
+</hibernate-reverse-engineering>

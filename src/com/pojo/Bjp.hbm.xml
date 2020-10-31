@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Bjp" table="bjp" catalog="projectdb">
+        <id name="bjpId" type="java.lang.Integer">
+            <column name="BjpId" />
+            <generator class="identity" />
+        </id>
+        <property name="bjpName" type="string">
+            <column name="BjpName" />
+        </property>
+        <property name="bjpCandidateRegId" type="java.lang.Integer">
+            <column name="BjpCandidateRegId" />
+        </property>
+        <property name="bjpTotalVotes" type="java.lang.Integer">
+            <column name="BjpTotalVotes" />
+        </property>
+        <property name="bjpStateTotalVotes" type="java.lang.Integer">
+            <column name="BjpStateTotalVotes" />
+        </property>
+        <property name="bjpCityTotalVotes" type="java.lang.Integer">
+            <column name="BjpCityTotalVotes" />
+        </property>
+        <property name="bjpAreaTotalVotes" type="java.lang.Integer">
+            <column name="BjpAreaTotalVotes" />
+        </property>
+        <property name="bjpFemaleTotalVotes" type="java.lang.Integer">
+            <column name="BjpFemaleTotalVotes" />
+        </property>
+        <property name="bjpMaleTotalVotes" type="java.lang.Integer">
+            <column name="BjpMaleTotalVotes" />
+        </property>
+    </class>
+</hibernate-mapping>

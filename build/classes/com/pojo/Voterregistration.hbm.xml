@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Voterregistration" table="voterregistration" catalog="projectdb">
+        <id name="vid" type="java.lang.Integer">
+            <column name="VId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="admin" class="com.pojo.Admin" fetch="select">
+            <column name="VAdminId" />
+        </many-to-one>
+        <many-to-one name="castvote" class="com.pojo.Castvote" fetch="select">
+            <column name="castId" />
+        </many-to-one>
+        <property name="vfirstname" type="string">
+            <column name="Vfirstname" />
+        </property>
+        <property name="vmiddlename" type="string">
+            <column name="Vmiddlename" />
+        </property>
+        <property name="vlastname" type="string">
+            <column name="Vlastname" />
+        </property>
+        <property name="vgender" type="string">
+            <column name="Vgender" />
+        </property>
+        <property name="vmaritalstatus" type="string">
+            <column name="Vmaritalstatus" />
+        </property>
+        <property name="vfathername" type="string">
+            <column name="Vfathername" />
+        </property>
+        <property name="vmothername" type="string">
+            <column name="Vmothername" />
+        </property>
+        <property name="vwifename" type="string">
+            <column name="Vwifename" />
+        </property>
+        <property name="vhusbandname" type="string">
+            <column name="Vhusbandname" />
+        </property>
+        <property name="vgaurdianname" type="string">
+            <column name="Vgaurdianname" />
+        </property>
+        <property name="vpermacountry" type="string">
+            <column name="Vpermacountry" />
+        </property>
+        <property name="vpermastate" type="string">
+            <column name="Vpermastate" />
+        </property>
+        <property name="vpermacity" type="string">
+            <column name="Vpermacity" />
+        </property>
+        <property name="vpermatown" type="string">
+            <column name="Vpermatown" />
+        </property>
+        <property name="vpermaaddress" type="string">
+            <column name="Vpermaaddress" />
+        </property>
+        <property name="vpermapincode" type="string">
+            <column name="Vpermapincode" length="250" />
+        </property>
+        <property name="vcorrescountry" type="string">
+            <column name="Vcorrescountry" />
+        </property>
+        <property name="vcorresstate" type="string">
+            <column name="Vcorresstate" />
+        </property>
+        <property name="vcorrescity" type="string">
+            <column name="Vcorrescity" />
+        </property>
+        <property name="vcorrestown" type="string">
+            <column name="Vcorrestown" />
+        </property>
+        <property name="vcorresaddress" type="string">
+            <column name="Vcorresaddress" />
+        </property>
+        <property name="vcorrespincode" type="string">
+            <column name="Vcorrespincode" length="250" />
+        </property>
+        <property name="voccupatiostatus" type="string">
+            <column name="Voccupatiostatus" />
+        </property>
+        <property name="voccupationdoc" type="binary">
+            <column name="Voccupationdoc" />
+        </property>
+        <property name="vdesignation" type="string">
+            <column name="vdesignation" />
+        </property>
+        <property name="vage" type="java.lang.Integer">
+            <column name="Vage" />
+        </property>
+        <property name="vdob" type="date">
+            <column name="Vdob" length="0" />
+        </property>
+        <property name="vadharno" type="string">
+            <column name="Vadharno" length="250" />
+        </property>
+        <property name="vadhardoc" type="binary">
+            <column name="Vadhardoc" />
+        </property>
+        <property name="vpanno" type="string">
+            <column name="Vpanno" length="250" />
+        </property>
+        <property name="vpandoc" type="binary">
+            <column name="Vpandoc" />
+        </property>
+        <property name="vphoto" type="string">
+            <column name="Vphoto" />
+        </property>
+        <property name="vmob" type="string">
+            <column name="VMob" length="10" />
+        </property>
+        <property name="vaddressId" type="java.lang.Integer">
+            <column name="VAddressId" />
+        </property>
+        <property name="vpwdstatus" type="java.lang.Boolean">
+            <column name="Vpwdstatus" />
+        </property>
+        <property name="vpwdudidno" type="string">
+            <column name="Vpwdudidno" length="250" />
+        </property>
+        <property name="vpwddoc" type="binary">
+            <column name="Vpwddoc" />
+        </property>
+        <property name="vemailId" type="string">
+            <column name="VEmailId" />
+        </property>
+        <property name="vpassword" type="string">
+            <column name="VPassword" />
+        </property>
+        <property name="vrepassword" type="string">
+            <column name="VRepassword" />
+        </property>
+        <property name="vsecurityQues" type="string">
+            <column name="VSecurityQues" length="500" />
+        </property>
+        <property name="vsecurityAnswer" type="string">
+            <column name="VSecurityAnswer" length="500" />
+        </property>
+        <property name="vcancelRegistration" type="string">
+            <column name="VCancelRegistration" />
+        </property>
+        <property name="vcancelOtherDetails" type="string">
+            <column name="VCancelOtherDetails" />
+        </property>
+        <property name="vcancelRegistrationDoc" type="binary">
+            <column name="VCancelRegistrationDoc" />
+        </property>
+        <property name="vepicNo" type="string">
+            <column name="VEpicNo" />
+        </property>
+        <property name="vstatus1" type="string">
+            <column name="VStatus1" />
+        </property>
+        <property name="vstatus2" type="string">
+            <column name="VStatus2" />
+        </property>
+        <property name="vstatus3" type="string">
+            <column name="VStatus3" />
+        </property>
+        <set name="addresses" table="address" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="AddVId" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Address" />
+        </set>
+    </class>
+</hibernate-mapping>

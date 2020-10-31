@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Bsp" table="bsp" catalog="projectdb">
+        <id name="bspId" type="java.lang.Integer">
+            <column name="BspId" />
+            <generator class="identity" />
+        </id>
+        <property name="bspName" type="string">
+            <column name="BspName" />
+        </property>
+        <property name="bspCandidateRegId" type="java.lang.Integer">
+            <column name="BspCandidateRegId" />
+        </property>
+        <property name="bspTotalVotes" type="java.lang.Integer">
+            <column name="BspTotalVotes" />
+        </property>
+        <property name="bspStateTotalVotes" type="java.lang.Integer">
+            <column name="BspStateTotalVotes" />
+        </property>
+        <property name="bspCityTotalVotes" type="java.lang.Integer">
+            <column name="BspCityTotalVotes" />
+        </property>
+        <property name="bspAreaTotalVotes" type="java.lang.Integer">
+            <column name="BspAreaTotalVotes" />
+        </property>
+        <property name="bspFemaleTotalVotes" type="java.lang.Integer">
+            <column name="BspFemaleTotalVotes" />
+        </property>
+        <property name="bspMaleTotalVotes" type="java.lang.Integer">
+            <column name="BspMaleTotalVotes" />
+        </property>
+    </class>
+</hibernate-mapping>

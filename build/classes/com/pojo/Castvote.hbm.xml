@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Apr, 2017 2:38:12 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Castvote" table="castvote" catalog="projectdb">
+        <id name="castId" type="java.lang.Integer">
+            <column name="CastId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="admin" class="com.pojo.Admin" fetch="select">
+            <column name="CastAdminId" />
+        </many-to-one>
+        <many-to-one name="candidateregistration" class="com.pojo.Candidateregistration" fetch="select">
+            <column name="canId" />
+        </many-to-one>
+        <many-to-one name="party" class="com.pojo.Party" fetch="select">
+            <column name="CastVotiPartyId" />
+        </many-to-one>
+        <property name="castVfirstName" type="string">
+            <column name="CastVFirstName" />
+        </property>
+        <property name="castVlastName" type="string">
+            <column name="CastVLastName" />
+        </property>
+        <property name="castVid" type="java.lang.Integer">
+            <column name="CastVId" />
+        </property>
+        <property name="castEpicNo" type="string">
+            <column name="CastEpicNo" />
+        </property>
+        <property name="castVadharNo" type="string">
+            <column name="CastVAdharNo" length="250" />
+        </property>
+        <property name="castVpanNo" type="string">
+            <column name="CastVPanNo" length="250" />
+        </property>
+        <property name="castVsecurtiyQues" type="string">
+            <column name="CastVSecurtiyQues" />
+        </property>
+        <property name="castVsecurityAnsw" type="string">
+            <column name="CastVSecurityAnsw" />
+        </property>
+        <property name="castVpassword" type="string">
+            <column name="CastVpassword" />
+        </property>
+        <property name="castVotingCountry" type="string">
+            <column name="CastVotingCountry" />
+        </property>
+        <property name="castVotingState" type="string">
+            <column name="CastVotingState" />
+        </property>
+        <property name="castVotingCity" type="string">
+            <column name="CastVotingCity" />
+        </property>
+        <property name="castVotingTown" type="string">
+            <column name="CastVotingTown" />
+        </property>
+        <property name="castVotingPincode" type="string">
+            <column name="CastVotingPincode" />
+        </property>
+        <property name="castVotingPartyName" type="string">
+            <column name="CastVotingPartyName" />
+        </property>
+        <property name="castCanId" type="java.lang.Integer">
+            <column name="CastCanID" />
+        </property>
+        <property name="castCanName" type="string">
+            <column name="CastCanName" />
+        </property>
+        <property name="castCanSymbol" type="binary">
+            <column name="CastCanSymbol" />
+        </property>
+        <property name="castVoteTime" type="timestamp">
+            <column name="CastVoteTime" length="0" />
+        </property>
+        <property name="castVotingStatus" type="string">
+            <column name="CastVotingStatus" length="250" />
+        </property>
+        <set name="voterregistrations" table="voterregistration" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="castId" />
+            </key>
+            <one-to-many class="com.pojo.Voterregistration" />
+        </set>
+        <set name="resultprocesses" table="resultprocess" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ResultCastId" />
+            </key>
+            <one-to-many class="com.pojo.Resultprocess" />
+        </set>
+    </class>
+</hibernate-mapping>
