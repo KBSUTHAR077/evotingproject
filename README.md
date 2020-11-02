@@ -1,6 +1,6 @@
 # evotingproject
 
-# How the EPFL e-voting system works
+# How the e-voting system works
 Running an election seems simple, doesn't it? Get some paper ballots, mark them, put them into a ballot box, and then count them.
 
 Running an electronic election seems simple as well: make electronic ballots, put them in an electronic ballot box and count them, right?
