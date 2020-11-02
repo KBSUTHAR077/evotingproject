@@ -1,6 +1,6 @@
 # evotingproject
 
-#How the EPFL e-voting system works
+# How the EPFL e-voting system works
 Running an election seems simple, doesn't it? Get some paper ballots, mark them, put them into a ballot box, and then count them.
 
 Running an electronic election seems simple as well: make electronic ballots, put them in an electronic ballot box and count them, right?
@@ -13,7 +13,7 @@ If we want voters using an e-voting system to have the same confidence they have
 Providing transparency that the votes were recorded and counted correctly
 Protecting the privacy of the voter
 Distribute the responsibility for correctly opening and counting the ballots
-#Transparency and distributed trust
+# Transparency and distributed trust
 In a traditional voting system implemented with a simple database in a central server, the first problem we see is that voters send their votes in to the voting 
 system and hope that the right answer comes out. Since the database table is held by the voting system in a "black box", they have no way to audit the system.
 
@@ -21,7 +21,7 @@ A solution to this is that the voting system can make each transaction it receiv
 been made public were not falisfied later. In this system, non-falsifiable, durable transparent logging is implemented with a Cothority, a cooperative authority of 
 nodes who work together to maintain a Skipchain. [3,5]
 
-#Protecting privacy: Shuffling the ballots
+# Protecting privacy: Shuffling the ballots
 Voters need to be identified to the system, so that each voter gets one vote, and so that they can change their vote, but the system will only count the last one.
 But if the system (and, as a result of the transparency log, the public) knows the names of the voters, should we also see the votes themselves? No!
 
@@ -31,11 +31,11 @@ in order to count them. And once the votes are unlocked, the privacy would be lo
 What is needed is to separate the votes from who cast them, so that the votes can be unlocked without losing privacy. In this system, privacy is assured using ideas
 from Andrew Neff, and from the Helios voting system [1,2].
 
-#Distributing secret key material
+# Distributing secret key material
 No single node can hold the keys for decryption alone, or else that node could violate the privacy or even falsify the votes. A Distributed Key Generation algorithm 
 is used to ensure that each election has a public key to use to encrypt the ballots, but the private key to unlock them later is not available in any one single server. 
 
-#What you see on the E-voting status page
+# What you see on the E-voting status page
 On the top of the page, you can choose between the test and live configurations.
 
 In the middle of the page, you can see the list of nodes which are working together to witness the election, and hold each other accountable for the correct implementation
@@ -50,7 +50,7 @@ to audit the election would be able to.
 When enough partial decryption operations are done, they can be combined together in order to reconstruct the original votes in plaintext. They can be downloaded, decoded, and 
 counted in the browser. An auditor can download all the blocks from the skipchain and verify that the election was conducted fairly.
 
-#Voting using Public Key Infrastructure
+# Voting using Public Key Infrastructure
 At the start of the application, the user registers to vote by providing their drivers license number, registrar district, and first and last name. In this step, we can check 
 to see if the drivers license is valid, and has not been registered previously. If all goes well, we create a private and public key for the voter with our certificate authority
 that is running on the cloud, and add those keys to the wallet. To read more about public key infrastructure, and how Hyperledger Fabric implements identity using this technology, go here.
